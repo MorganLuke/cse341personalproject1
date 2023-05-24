@@ -1,0 +1,88 @@
+#  LOCALHOST
+###
+GET http://localhost:8080/contacts HTTP/1.1
+###
+GET http://localhost:8080/contacts/644d8fac48a57a41ab7ece74 HTTP/1.1
+###
+GET http://localhost:8080/contacts/644d902d48a57a41ab7ece75 HTTP/1.1
+###
+GET http://localhost:8080/contacts/644d908c48a57a41ab7ece76 HTTP/1.1
+
+
+# Create a Contact
+### 
+POST http://localhost:8080/contacts/ HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Alan",
+    "lastName":"Henry",
+    "email":"alanhenry@gmail.com",
+    "favoriteColor":"Blue",
+    "birthday":"01/01/2000"
+}
+
+# Update a contact
+###
+PUT http://localhost:8080/contacts/64558aea1fd1bff43d09aa7c HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Barry",
+    "lastName":"Allen",
+    "email":"barryallen@gmail.com",
+    "favoriteColor":"Red",
+    "birthday":"07/31/1980"
+}
+
+
+# Delete a contact
+###
+DELETE http://localhost:8080/contacts/64558aea1fd1bff43d09aa7c HTTP/1.1
+
+
+
+#  PRODUCTION Deploy
+###
+GET https://lukecse341.onrender.com/contacts HTTP/1.1
+###
+GET https://lukecse341.onrender.com/contacts/644d8fac48a57a41ab7ece74 HTTP/1.1
+###
+GET https://lukecse341.onrender.com/contacts/644d902d48a57a41ab7ece75 HTTP/1.1
+###
+GET https://lukecse341.onrender.com/contacts/644d908c48a57a41ab7ece76 HTTP/1.1
+
+
+# Create a Contact
+###
+POST https://lukecse341.onrender.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Alan",
+    "lastName":"Henry",
+    "email":"alanhenry@gmail.com",
+    "favoriteColor":"Blue",
+    "birthday":"01/01/2000"
+}
+
+
+# Update a Contact
+###
+PUT https://lukecse341.onrender.com/contacts/6456d88d8e52761e61252765 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Barry",
+    "lastName":"Allen",
+    "email":"barryallen@gmail.com",
+    "favoriteColor":"Red",
+    "birthday":"07/31/1980"
+}
+
+
+
+# Delete a Contact
+###
+DELETE https://lukecse341.onrender.com/contacts/6456d88d8e52761e61252765 HTTP/1.1
+
