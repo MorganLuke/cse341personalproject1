@@ -1,0 +1,30 @@
+ [   {
+      "jeepName": "2010 JK",
+      "projectName": "Front bumper reciever",
+      "description": "cut hole in front bumper and weld in a reciever for a wench or bathroom",
+      "partNeeded1": "2 inch reviever",
+      "partNeeded2": "2 feet angle iron",
+      "partsOnhand": false,
+      "startDate": "06/10/2023",
+      "hoursToComplete": "3"
+    },
+    {
+        "jeepName": "2010 JK",
+        "projectName": "Ball joints",
+        "description": "replace upper and lower ball joints",
+        "partNeeded1": "upper ball joint set both sides",
+        "partNeeded2": "lower ball joint set both sides",
+        "partsOnhand": true,
+        "startDate": "06/15/2023",
+        "hoursToComplete": "4"
+    },
+    {
+        "jeepName": "2010 JK",
+        "projectName": "Lock box",
+        "description": "install under driver seat locking box for valuables",
+        "partNeeded1": "lock box from amazon",
+        "partNeeded2": "washers for shims",
+        "partsOnhand": true,
+        "startDate": "05/25/2023",
+        "hoursToComplete": "2"
+    }]

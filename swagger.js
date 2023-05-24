@@ -2,10 +2,10 @@ const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
   info: {
-    title: 'My API',
-    description: 'Contacts API'
+    title: 'Jeep Projects API',
+    description: 'Jeep Projects API is to help trackprojects on each of my jeeps.'
   },
-  host: 'lukecse341.onrender.com',
+  host: 'jeepprojects.onrender.com',
   schemes: ['https']
 };
 

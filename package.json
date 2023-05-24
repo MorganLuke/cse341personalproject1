@@ -1,5 +1,5 @@
 {
-  "name": "cse341",
+  "name": "jeepprojects",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MorganLuke/cse341.git"
+    "url": "git+https://github.com/MorganLuke/cse341personalproject1.git"
   },
   "author": "",
   "license": "ISC",

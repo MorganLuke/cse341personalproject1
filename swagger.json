@@ -1,11 +1,11 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "My API",
-    "description": "Contacts API",
+    "title": "Jeep Projects API",
+    "description": "Jeep Projects API is to help trackprojects on each of my jeeps.",
     "version": "1.0.0"
   },
-  "host": "lukecse341.onrender.com",
+  "host": "jeepprojects.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
@@ -18,7 +18,7 @@
         "responses": {}
       }
     },
-    "/contacts/": {
+    "/projects/": {
       "get": {
         "description": "",
         "produces": [
@@ -40,19 +40,28 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "jeepName": {
                   "example": "any"
                 },
-                "lastName": {
+                "projectName": {
                   "example": "any"
                 },
-                "email": {
+                "description": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "partNeeded1": {
                   "example": "any"
                 },
-                "birthday": {
+                "partNeeded2": {
+                  "example": "any"
+                },
+                "partsOnhand": {
+                  "example": "any"
+                },
+                "startDate": {
+                  "example": "any"
+                },
+                "hoursToComplete": {
                   "example": "any"
                 }
               }
@@ -69,7 +78,7 @@
         }
       }
     },
-    "/contacts/{id}": {
+    "/projects/{id}": {
       "get": {
         "description": "",
         "produces": [
@@ -104,19 +113,28 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "jeepName": {
                   "example": "any"
                 },
-                "lastName": {
+                "projectName": {
                   "example": "any"
                 },
-                "email": {
+                "description": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "partNeeded1": {
                   "example": "any"
                 },
-                "birthday": {
+                "partNeeded2": {
+                  "example": "any"
+                },
+                "partsOnhand": {
+                  "example": "any"
+                },
+                "startDate": {
+                  "example": "any"
+                },
+                "hoursToComplete": {
                   "example": "any"
                 }
               }

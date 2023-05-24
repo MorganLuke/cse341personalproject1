@@ -1,88 +1,100 @@
 #  LOCALHOST
 ###
-GET http://localhost:8080/contacts HTTP/1.1
+GET http://localhost:8080/projects HTTP/1.1
 ###
-GET http://localhost:8080/contacts/644d8fac48a57a41ab7ece74 HTTP/1.1
+GET http://localhost:8080/projects/646dacf77eee884597889205 HTTP/1.1
 ###
-GET http://localhost:8080/contacts/644d902d48a57a41ab7ece75 HTTP/1.1
+GET http://localhost:8080/projects/646dacf77eee884597889206 HTTP/1.1
 ###
-GET http://localhost:8080/contacts/644d908c48a57a41ab7ece76 HTTP/1.1
+GET http://localhost:8080/projects/646dacf77eee884597889207 HTTP/1.1
 
 
-# Create a Contact
+# Create a project
 ### 
-POST http://localhost:8080/contacts/ HTTP/1.1
+POST http://localhost:8080/projects HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Alan",
-    "lastName":"Henry",
-    "email":"alanhenry@gmail.com",
-    "favoriteColor":"Blue",
-    "birthday":"01/01/2000"
+      "jeepName": "2001 TJ",
+      "projectName": "Cam shaft position sensor",
+      "description": "low engine performance causing errors and eventually undrivable",
+      "partNeeded1": "",
+      "partNeeded2": "",
+      "partsOnhand": true,
+      "startDate": "05/27/2023",
+      "hoursToComplete": "1"
 }
 
-# Update a contact
+# Update a project
 ###
-PUT http://localhost:8080/contacts/64558aea1fd1bff43d09aa7c HTTP/1.1
+PUT http://localhost:8080/projects/646db099b8e51e09997add73 HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Barry",
-    "lastName":"Allen",
-    "email":"barryallen@gmail.com",
-    "favoriteColor":"Red",
-    "birthday":"07/31/1980"
+      "jeepName": "2001 TJ",
+      "projectName": "Cam shaft position sensor",
+      "description": "low engine performance causing errors and eventually undrivable",
+      "partNeeded1": "position sensor",
+      "partNeeded2": "",
+      "partsOnhand": true,
+      "startDate": "05/27/2023",
+      "hoursToComplete": "2"
 }
 
 
 # Delete a contact
 ###
-DELETE http://localhost:8080/contacts/64558aea1fd1bff43d09aa7c HTTP/1.1
+DELETE http://localhost:8080/projects/646db099b8e51e09997add73 HTTP/1.1
 
 
 
 #  PRODUCTION Deploy
 ###
-GET https://lukecse341.onrender.com/contacts HTTP/1.1
+GET https://jeepprojects.onrender.com/projects HTTP/1.1
 ###
-GET https://lukecse341.onrender.com/contacts/644d8fac48a57a41ab7ece74 HTTP/1.1
+GET https://jeepprojects.onrender.com/projects/644d8fac48a57a41ab7ece74 HTTP/1.1
 ###
-GET https://lukecse341.onrender.com/contacts/644d902d48a57a41ab7ece75 HTTP/1.1
+GET https://jeepprojects.onrender.com/projects/644d902d48a57a41ab7ece75 HTTP/1.1
 ###
-GET https://lukecse341.onrender.com/contacts/644d908c48a57a41ab7ece76 HTTP/1.1
+GET https://jeepprojects.onrender.com/projects/644d908c48a57a41ab7ece76 HTTP/1.1
 
 
 # Create a Contact
 ###
-POST https://lukecse341.onrender.com/contacts HTTP/1.1
+POST https://jeepprojects.onrender.com/projects HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Alan",
-    "lastName":"Henry",
-    "email":"alanhenry@gmail.com",
-    "favoriteColor":"Blue",
-    "birthday":"01/01/2000"
+      "jeepName": "2001 TJ",
+      "projectName": "Cam shaft position sensor",
+      "description": "low engine performance causing errors and eventually undrivable",
+      "partNeeded1": "",
+      "partNeeded2": "",
+      "partsOnhand": true,
+      "startDate": "05/27/2023",
+      "hoursToComplete": "1"
 }
 
 
 # Update a Contact
 ###
-PUT https://lukecse341.onrender.com/contacts/6456d88d8e52761e61252765 HTTP/1.1
+PUT https://jeepprojects.onrender.com/projects/6456d88d8e52761e61252765 HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Barry",
-    "lastName":"Allen",
-    "email":"barryallen@gmail.com",
-    "favoriteColor":"Red",
-    "birthday":"07/31/1980"
+      "jeepName": "2001 TJ",
+      "projectName": "Cam shaft position sensor",
+      "description": "low engine performance causing errors and eventually undrivable",
+      "partNeeded1": "position sensor",
+      "partNeeded2": "",
+      "partsOnhand": true,
+      "startDate": "05/27/2023",
+      "hoursToComplete": "2"
 }
 
 
 
 # Delete a Contact
 ###
-DELETE https://lukecse341.onrender.com/contacts/6456d88d8e52761e61252765 HTTP/1.1
+DELETE https://jeepprojects.onrender.com/projects/6456d88d8e52761e61252765 HTTP/1.1
 
