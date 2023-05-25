@@ -2,9 +2,9 @@ const validator = require('../helpers/validate');
 
 const saveProject = (req, res, next) => {
     const validationRule = {
-        jeepName: 'requred|string',
-        projectName: 'requred|string',
-        description: 'requred|string',
+        jeepName: 'required|string',
+        projectName: 'required|string',
+        description: 'required|string',
         partNeeded1: 'string',
         partNeeded2: 'string',
         partsOnhand: 'required|boolean',
