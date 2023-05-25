@@ -4,6 +4,9 @@ const ObjectId = require('mongodb').ObjectId;
 const getAll = async (req, res) => {
   const result = await mongodb.getDb().db().collection('projects').find();
   result.toArray().then((lists) => {
+    if (err) {
+      res.status(400).json({ message: err });
+    }
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists);
   });
@@ -12,9 +15,15 @@ const getAll = async (req, res) => {
 
 
 const getSingle = async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid project id to find a project.');
+  }
   const projectId = new ObjectId(req.params.id);
   const result = await mongodb.getDb().db().collection('projects').find({ _id: projectId });
   result.toArray().then((lists) => {
+    if (err) {
+      res.status(400).json({ message: err });
+    }
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists[0]);
   });
@@ -22,7 +31,7 @@ const getSingle = async (req, res) => {
 
 
 
-// creates a new contact and document in the collection
+// creates a new project and document in the collection
 const createProject = async (req, res) => {
   const project = {
     jeepName: req.body.jeepName,
@@ -46,6 +55,9 @@ const createProject = async (req, res) => {
 
 // Updates a project in a document
 const updateProject = async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid project id to update a project.');
+  }
   const projectId = new ObjectId(req.params.id);
   // be aware of updateOne if you only want to update specific fields
   const project = {
@@ -71,6 +83,9 @@ const updateProject = async (req, res) => {
 
 // deletes a document in the collection
 const deleteProject = async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid project id to update a project.');
+  }
   const projectId = new ObjectId(req.params.id);
   const response = await mongodb.getDb().db().collection('projects').deleteOne({ _id: projectId }, true);
   console.log(response);
