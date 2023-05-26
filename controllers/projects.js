@@ -2,8 +2,8 @@ const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
 const getAll = async (req, res) => {
-  const result = await mongodb.getDb().db().collection('projects').find();
-  result.toArray().then((lists) => {
+  const result = await mongodb.getDb().db().collection('projects').find()
+  .toArray((err, lists) => {
     if (err) {
       res.status(400).json({ message: err });
     }
@@ -19,13 +19,13 @@ const getSingle = async (req, res) => {
     res.status(400).json('Must use a valid project id to find a project.');
   }
   const projectId = new ObjectId(req.params.id);
-  const result = await mongodb.getDb().db().collection('projects').find({ _id: projectId });
-  result.toArray().then((lists) => {
+  const result = await mongodb.getDb().db().collection('projects').find({ _id: projectId })
+  .toArray((err, result) => {
     if (err) {
       res.status(400).json({ message: err });
     }
     res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(lists[0]);
+    res.status(200).json(result[0]);
   });
 };
 
