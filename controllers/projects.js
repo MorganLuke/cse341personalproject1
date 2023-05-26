@@ -3,7 +3,7 @@ const ObjectId = require('mongodb').ObjectId;
 
 const getAll = (req, res) => {
   mongodb.getDb().db().collection('projects').find()
-  .toArray((err, lists) => {
+    .toArray((err, lists) => {
     if (err) {
       res.status(400).json({ message: err });
     }
