@@ -9,7 +9,7 @@ const saveProject = (req, res, next) => {
         partNeeded2: 'string',
         partsOnhand: 'required|boolean',
         startDate: 'required|date',
-        hoursToComplete: "required|integer"
+        hoursToComplete: 'required|integer'
     };
     validator(req.body, validationRule, {}, (err, status) => {
         if (!status) {
