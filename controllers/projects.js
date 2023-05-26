@@ -45,6 +45,7 @@ const getSingle = async (req, res) => {
 
 // creates a new contact and document in the collection
 const createProject = async (req, res) => {
+  try{
   const project = {
     jeepName: req.body.jeepName,
     projectName: req.body.projectName,
@@ -61,12 +62,16 @@ const createProject = async (req, res) => {
   } else {
     res.status(500).json(response.error || 'Some error occurred while creating the project.');
   }
+} catch (err) {
+  res.status(500).json(err);
+}
 };
 
 
 
 // Updates a project in a document
 const updateProject = async (req, res) => {
+  try{
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Must use a valid project id to find a project.');
   }
@@ -91,12 +96,16 @@ const updateProject = async (req, res) => {
   } else {
     res.status(500).json(response.error || 'Some error occurred while updating the project.');
   }
+} catch (err) {
+  res.status(500).json(err);
+}
 };
 
 
 
 // deletes a document in the collection
 const deleteProject = async (req, res) => {
+  try{
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Must use a valid project id to find a project.');
   }
@@ -108,6 +117,9 @@ const deleteProject = async (req, res) => {
   } else {
     res.status(500).json(response.error || 'Some error occurred while deleting the project.');
   }
+  } catch (err) {
+  res.status(500).json(err);
+}
 };
 
 

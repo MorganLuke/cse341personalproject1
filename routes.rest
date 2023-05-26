@@ -27,7 +27,7 @@ content-type: application/json
 
 # Update a project
 ###
-PUT http://localhost:8080/projects/647053abe793550ab516ff65 HTTP/1.1
+PUT http://localhost:8080/projects/6470e8a20ddea826aa39ac93 HTTP/1.1
 content-type: application/json
 
 {
@@ -44,7 +44,7 @@ content-type: application/json
 
 # Delete a contact
 ###
-DELETE http://localhost:8080/projects/647053abe793550ab516ff65 HTTP/1.1
+DELETE http://localhost:8080/projects/6470e8a20ddea826aa39ac93 HTTP/1.1
 
 
 
