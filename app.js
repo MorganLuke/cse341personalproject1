@@ -7,7 +7,7 @@ const port = process.env.PORT || 8080;
 const app = express();
 
 
-const { auth } = require('express-openid-connect');
+const { auth, requiresAuth } = require('express-openid-connect');
 
 const config = {
   authRequired: false,
@@ -26,6 +26,9 @@ app.get('/', (req, res) => {
   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
 });
 
+app.get('/profile', requiresAuth(), (req, res) => {
+  res.send(JSON.stringify(req.oidc.user));
+});
 
 app
   .use(bodyParser.json())
