@@ -24,6 +24,33 @@ const saveProject = (req, res, next) => {
   });
 };
 
+
+const saveTrip = (req, res, next) => {
+  const validationRule = {
+    tripName: 'required|string',
+    description: 'required|string',
+    friendOnTrip: 'string',
+    vehicle: 'required|string',
+    camping: 'required|boolean',
+    tripDate: 'required|date',
+    numberOfNights: 'required|integer',
+    milesFromHouse: 'required|integer'
+  };
+  validator(req.body, validationRule, {}, (err, status) => {
+    if (!status) {
+      res.status(412).send({
+        success: false,
+        message: 'Validation failed',
+        data: err
+      });
+    } else {
+      next();
+    }
+  });
+};
+
+
 module.exports = {
-  saveProject
+  saveProject,
+  saveTrip
 };

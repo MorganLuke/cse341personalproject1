@@ -98,3 +98,109 @@ content-type: application/json
 ###
 DELETE https://jeepprojects.onrender.com/projects/6456d88d8e52761e61252765 HTTP/1.1
 
+
+
+
+# **********************************************************************************
+# **********************************************************************************
+
+#  LOCALHOST
+###
+GET http://localhost:8080/trips HTTP/1.1
+###
+GET http://localhost:8080/trips/6488f43a9b0eda6d58c198bd HTTP/1.1
+###
+GET http://localhost:8080/trips/6488f43a9b0eda6d58c198be HTTP/1.1
+###
+GET http://localhost:8080/trips/6488f43a9b0eda6d58c198bf HTTP/1.1
+
+
+# Create a trip
+### 
+POST http://localhost:8080/trips HTTP/1.1
+content-type: application/json
+
+{
+    "tripName": "Strawberry Lake",
+    "description": "Day trip to strawberry lake stopping at westlake along the way",
+    "friendOnTrip": "Smart Family",
+    "vehicle": "Jeep TJ",
+    "camping": false,
+    "tripDate": "7/2/2023",
+    "numberOfNights": "0",
+    "milesFromHouse": "45"
+}
+
+# Update a trip
+###
+PUT http://localhost:8080/trips/6470e8a20ddea826aa39ac93 HTTP/1.1
+content-type: application/json
+
+{
+    "tripName": "Strawberry Lake and West Lake",
+    "description": "Day trip to strawberry lake stopping at westlake along the way",
+    "friendOnTrip": "Smart Family",
+    "vehicle": "Jeep JK",
+    "camping": true,
+    "tripDate": "7/2/2023",
+    "numberOfNights": "3",
+    "milesFromHouse": "45"
+}
+
+
+# Delete a trip
+###
+DELETE http://localhost:8080/trips/6470e8a20ddea826aa39ac93 HTTP/1.1
+
+
+
+#  PRODUCTION Deploy
+###
+GET https://jeepprojects.onrender.com/trips HTTP/1.1
+###
+GET https://jeepprojects.onrender.com/trips/6488f43a9b0eda6d58c198bd HTTP/1.1
+###
+GET https://jeepprojects.onrender.com/trips/6488f43a9b0eda6d58c198be HTTP/1.1
+###
+GET https://jeepprojects.onrender.com/trips/6488f43a9b0eda6d58c198bf HTTP/1.1
+
+
+# Create a trip
+###
+POST https://jeepprojects.onrender.com/trips HTTP/1.1
+content-type: application/json
+
+{
+    "tripName": "Strawberry Lake",
+    "description": "Day trip to strawberry lake stopping at westlake along the way",
+    "friendOnTrip": "Smart Family",
+    "vehicle": "Jeep TJ",
+    "camping": false,
+    "tripDate": "7/2/2023",
+    "numberOfNights": "0",
+    "milesFromHouse": "45"
+}
+
+
+# Update a trip
+###
+PUT https://jeepprojects.onrender.com/trips/6456d88d8e52761e61252765 HTTP/1.1
+content-type: application/json
+
+{
+    "tripName": "Strawberry Lake and West Lake",
+    "description": "Day trip to strawberry lake stopping at westlake along the way",
+    "friendOnTrip": "Smart Family",
+    "vehicle": "Jeep JK",
+    "camping": true,
+    "tripDate": "7/2/2023",
+    "numberOfNights": "3",
+    "milesFromHouse": "45"
+}
+
+
+
+# Delete a trip
+###
+DELETE https://jeepprojects.onrender.com/trips/6456d88d8e52761e61252765 HTTP/1.1
+

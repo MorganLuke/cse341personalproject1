@@ -1,0 +1,30 @@
+[   {
+    "tripName": "Rubicon Trail",
+    "description": "Trip for three days to the Rubicon trail with the white jeep but with all bypasses",
+    "friendOnTrip": "Dave Wendy",
+    "vehicle": "Jeep JK",
+    "camping": true,
+    "tripDate": "07/17/2023",
+    "numberOfNights": "7",
+    "milesFromHouse": "150"
+  },
+  {
+    "tripName": "Swamp Lake",
+    "description": "Trip With the smarts to swamp lake with two other jeeps",
+    "friendOnTrip": "Smart Familyr",
+    "vehicle": "Jeep TJ",
+    "camping": true,
+    "tripDate": "08/13/2023",
+    "numberOfNights": "3",
+    "milesFromHouse": "32"
+  },
+  {
+    "tripName": "Pismo Beach",
+    "description": "Going to pismo beach for one night and staying in hotel",
+    "friendOnTrip": "",
+    "vehicle": "Jeep JK",
+    "camping": false,
+    "tripDate": "10/25/2023",
+    "numberOfNights": "1",
+    "milesFromHouse": "250"
+  }]
